@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(-45deg,#1d2671,#c33764,#0f2027,#203a43);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+}
+
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:420px;
+    padding:40px;
+    text-align:center;
+    border-radius:20px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.25);
+    box-shadow:0 20px 45px rgba(0,0,0,0.35);
+}
+
+h1{
+    color:#fff;
+    margin-bottom:25px;
+    font-size:34px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:20px;
+    background:rgba(255,255,255,0.15);
+    color:#fff;
+    border:2px solid transparent;
+    transition:0.3s;
+}
+
+input::placeholder{
+    color:#ddd;
+}
+
+input:focus{
+    border-color:#00f5ff;
+    box-shadow:0 0 15px #00f5ff;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+    cursor:pointer;
+    background:linear-gradient(135deg,#00f5ff,#7b2ff7);
+    transition:.4s;
+}
+
+button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 20px #00f5ff,
+               0 0 35px #7b2ff7;
+}
+
+.result{
+    margin-top:25px;
+    padding:18px;
+    border-radius:12px;
+    background:rgba(255,255,255,0.12);
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+.result span{
+    color:#00ff9d;
+    font-size:28px;
+    font-weight:bold;
+}
+
+@media(max-width:500px){
+    .container{
+        width:90%;
+        padding:30px 20px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+}
